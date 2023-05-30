@@ -1,5 +1,5 @@
 //developed by: Gabriel Lucas.
-//mat: 2--3.---7.5-1-.
+//mat: 2---.0--7.-8--.
 //prof: Daniel Gomes.
 
 #include <stdio.h>
@@ -24,8 +24,8 @@ int main()
     int medB1 = 0,medB2 = 0, medB3 = 0, medB4 = 0, medB5 = 0;
     int medC1 = 0,medC2 = 0, medC3 = 0, medC4 = 0, medC5 = 0;
     int medD1 = 0,medD2 = 0, medD3 = 0, medD4 = 0, medD5 = 0;
-    int medE1 = 0,medE2 = 0, medE3 = 0, medE4 = 0, medE5 = 0;  //media 
-    
+    int medE1 = 0,medE2 = 0, medE3 = 0, medE4 = 0, medE5 = 0;  //media
+   
 
 
     //if(flag != 0){
@@ -35,14 +35,7 @@ int main()
 
     do{
         //entrada
-
-        printf("Seja bem-vindo a prefeitura de Goiania!\n");
-        printf("Visamos entender melhor onde devemos melhorar nosso servico e para isso\n");
-        printf("Gostariamos que voce participasse da nossa pesquisa de qualidade!\n\n");
-
-        printf("***********************************************************\n\n");
-        printf("***********************************************************\n\n");
-        
+       
         printf("Escolha o seu setor:\n\n");
         printf("(a) Jardim America: \n");
         printf("(b) Jardim Goias: \n");
@@ -51,46 +44,55 @@ int main()
         printf("(e) Novo mundo: \n");
         printf("(f) Sair e exibir resultados.: \n");
         scanf("%c", &choice);
-        
+       
         //processamento
 
         switch(choice){
             case'a':
             case'A':
+            jump1: //funcao para retorno
             printf("De 1-5, qual a sua nota para:\n");
             printf("Saneamento: \n");
             scanf("%f", &notasanA);
             if(notasanA > 5){
                 printf("--------------------------nota invalida.\n\n");
                 notasanA--;
-                
+                goto jump1; // retorna para a funcao de retorno, obrigando o user digitar um valor == 5.
+               
             }
-            
+            jump2:
             printf("Iluminacao: \n");
             scanf("%f", &notailumA);
             if(notailumA > 5){
                 printf("--------------------------Nota invalida.\n\n");
                 notailumA--;
-                
-                
+                goto jump2;
+               
+               
             }
+            jump3:
             printf("Seguranca Publica : \n");
             scanf("%f", &notasegA);
             if(notasegA > 5){
-                printf("--------------------------Nota invalida.");
+                printf("--------------------------Nota invalida\n.");
                 notasegA--;
+                goto jump3;
             }
+            jump4:
             printf("Lazer: \n");
             scanf("%f", &notalazA);
             if(notalazA > 5){
-                printf("--------------------------Nota invalida.");
+                printf("--------------------------Nota invalida\n.");
                 notalazA--;
+                goto jump4;
             }
+            jump5:
             printf("Coleta de lixo: \n");
             scanf("%f", &notacollixA);
             if(notacollixA > 5){
-                printf("---------------------------Nota invalida.");
+                printf("---------------------------Nota invalida\n.");
                 notacollixA--;
+                goto jump5;
             }
             jdAmerica++;
 
@@ -98,36 +100,46 @@ int main()
 
             case'b':
             case'B':
+            b1:
             printf("De 1-5, qual a sua nota para:\n");
             printf("Saneamento: \n");
             scanf("%f", &notasanB);
             if(notasanB > 5){
                 printf("--------------------------nota invalida.\n\n");
                 notasanB--;
+                goto b1;
             }
+            b2:
             printf("Iluminaçao: \n");
             scanf("%f", &notailumB);
             if(notailumB > 5){
-                printf("--------------------------Nota invalida.");
+                printf("--------------------------Nota invalida\n.");
                 notailumB--;
+                goto b2;
             }
+            b3:
             printf("Seguranca Publica: \n");
             scanf("%f", &notasegB);
             if(notasegB > 5){
-                printf("-----------------------------Nota Invalida.");
+                printf("-----------------------------Nota Invalida\n.");
                 notasegB--;
+                goto b3;
             }
+            b4:
             printf("Lazer: \n");
             scanf("%f", &notalazB);
             if(notalazB > 5){
-                printf("-----------------------------Nota Invalida.");
+                printf("-----------------------------Nota Invalida\n.");
                 notalazB--;
+                goto b4;
             }
+            b5:
             printf("Coleta de lixo: \n");
             scanf("%f", &notacollixB);
             if(notacollixB > 5){
-                printf("------------------------------Nota invalida.");
+                printf("------------------------------Nota invalida\n.");
                 notacollixB--;
+                goto b5;
             }
             jardimgo++;
 
@@ -135,36 +147,46 @@ int main()
 
             case'c':
             case'C':
+            c1:
             printf("De 1-5, qual a sua nota para:\n");
             printf("Saneamento: \n");
             scanf("%f", &notasanC);
             if(notasanC > 5){
                 printf("--------------------------nota invalida.\n\n");
                 notasanC--;
+                goto c1;
             }
+            c2:
             printf("Iluminacao: ");
             scanf("%f", &notailumC);
             if(notailumC > 5){
                 printf("-------------------------Nota invalida.");
                 notailumC--;
+                goto c2;
             }
+            c3:
             printf("Seguranca Publica: \n");
             scanf("%f", &notasegC);
             if(notasegC > 5){
                 printf("------------------------------Nota invalida.");
                 notasegC--;
+                goto c3;
             }
+            c4:
             printf("Lazer: \n");
             scanf("%f", &notalazC);
             if(notalazC > 5){
                 printf("---------------------Nota invalida.");
                 notalazC--;
+                goto c4;
             }
+            c5:
             printf("Coleta de lixo. \n");
             scanf("%f", &notacollixC);
             if(notacollixC > 5){
                 printf("--------------------------Nota Invalida.");
                 notacollixC--;
+                goto c5;
             }
             atheneu++;
 
@@ -172,77 +194,94 @@ int main()
 
             case'd':
             case'D':
+            d1:
             printf("De 1-5, qual a sua nota para:\n");
             printf("Saneamento: \n");
             scanf("%f", &notasanD);
             if(notasanD > 5){
                 printf("--------------------------nota invalida.\n\n");
                 notasanD--;
-                continue;
+                goto d1;
             }
+            d2:
             printf("Iluminacao.");
             scanf("%f", &notailumD);
             if(notailumD > 5){
                 printf("---------------------------Nota invalida.");
                 notailumD--;
+                goto d2;
             }
+            d3:
             printf("Seguranca Publica. \n");
             scanf("%f", &notasegD);
             if(notasegD > 5){
                 printf("---------------------------Nota invalida.");
                 notasegD--;
+                goto d3;
             }
+            d4:
             printf("Lazer. ");
             scanf("%f", &notalazD);
             if(notalazD > 5){
                 printf("------------------------------Nota invalida.");
                 notalazD--;
+                goto d4;
             }
+            d5:
             printf("Coleta de Lixo.");
             scanf("%f", &notacollixD);
             if(notacollixD > 5){
                 printf("---------------------------------Nota invalida.");
                 notacollixD--;
+                goto d5;
             }
             granderetiro++;
-            
+           
             break;
 
             case'e':
             case'E':
-
+            e1:
             printf("De 1-5, qual a sua nota para:\n");
             printf("Saneamento: \n");
             scanf("%f", &notasanE);
             if(notasanE > 5){
                 printf("--------------------------nota invalida.\n\n");
                 notasanE--;
+                goto e1;
             }
-            
+           e2:
             printf("Iluminacao: \n");
             scanf("%f", &notailumE);
             if(notailumE > 5){
                 printf("--------------------------Nota invalida.\n\n");
                 notailumE--;
-                
+                goto e2;
+               
             }
+            e3:
             printf("Seguranca Publica : \n");
             scanf("%f", &notasegE);
             if(notasegE > 5){
                 printf("--------------------------Nota invalida.");
                 notasegE--;
+                goto e3;
             }
+            e4:
             printf("Lazer: \n");
             scanf("%f", &notalazE);
             if(notalazE > 5){
                 printf("--------------------------Nota invalida.");
                 notalazE--;
+                goto e4;
             }
+            e5:
             printf("Coleta de lixo: \n");
             scanf("%f", &notacollixE);
             if(notacollixE > 5){
                 printf("---------------------------Nota invalida.");
                 notacollixE--;
+                goto e5;
             }
             break;
             novomundo++;
@@ -250,7 +289,7 @@ int main()
         }
         printf("\n");
 
-      
+     
 
      //output | saida
 
@@ -300,7 +339,7 @@ int main()
         printf("A media para Coleta de lixo e: %d\n", medC5);
 
         printf("*****************************************************************************\n");
-        
+       
         printf("O resultado das medias de cada setor sao: \n");
         printf("(D) Grande Retiro: \n\n");
         medD1 = notasanD / granderetiro;
@@ -315,7 +354,7 @@ int main()
         printf("A media para Coleta de lixo e: %d\n", medD5);
 
         printf("*****************************************************************************\n");
-        
+       
         printf("O resultado das medias de cada setor sao: \n");
         printf("(E) Novo Mundo: \n\n");
         medE1 = notasanE / novomundo;
